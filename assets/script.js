@@ -5,6 +5,9 @@
   const nav = document.querySelector('.primary-nav');
   const currentYear = document.querySelector('[data-current-year]');
 
+  const formalName = 'Sree Harsha Naropanth Ramamurthy';
+  const publicationName = 'N. R. S. Harsha';
+  const preferredName = 'Harsha';
   const editorialMailto = 'mailto:snaropan@ur.rochester.edu?cc=nrsreeharshae%40gmail.com&subject=Professional%20or%20editorial%20correspondence';
   const nsfUrl = 'https://www.nsf.gov/awardsearch/show-award?AWD_ID=2606713';
 
@@ -46,9 +49,9 @@
 
       .identity-ribbon-affiliation strong {
         color: var(--text);
-        font-size: .96rem;
-        font-weight: 800;
-        line-height: 1.35;
+        font-size: .98rem;
+        font-weight: 820;
+        line-height: 1.38;
       }
 
       .identity-ribbon-affiliation span:not(.ribbon-kicker),
@@ -56,6 +59,12 @@
         color: var(--muted);
         font-size: .82rem;
         line-height: 1.45;
+      }
+
+      .identity-ribbon-affiliation .identity-alias {
+        margin: 2px 0 3px;
+        color: var(--text);
+        font-weight: 680;
       }
 
       .identity-ribbon-contact {
@@ -83,9 +92,7 @@
         text-decoration: none;
       }
 
-      .hero-copy {
-        max-width: 720px;
-      }
+      .hero-copy { max-width: 730px; }
 
       .hero h1 {
         display: flex;
@@ -94,7 +101,7 @@
         align-items: baseline;
         flex-wrap: wrap;
         gap: 10px 16px;
-        font-size: clamp(3rem, 4.05vw, 4.15rem);
+        font-size: clamp(3.05rem, 4.2vw, 4.35rem);
         line-height: .98;
         letter-spacing: -.045em;
       }
@@ -108,10 +115,43 @@
         text-transform: uppercase;
       }
 
+      .hero-name-context {
+        display: flex;
+        max-width: 690px;
+        margin: 17px 0 0;
+        flex-wrap: wrap;
+        gap: 6px 11px;
+        color: var(--muted);
+        font-size: .83rem;
+        font-weight: 620;
+        line-height: 1.5;
+      }
+
+      .hero-name-context span {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .hero-name-context span + span::before {
+        margin-right: 11px;
+        color: var(--border);
+        content: '•';
+      }
+
+      .hero-name-context .formal-name {
+        color: var(--text);
+        font-weight: 760;
+      }
+
+      .hero-name-context .preferred-name {
+        color: var(--accent-2);
+        font-weight: 780;
+      }
+
       .hero-affiliation {
         display: grid;
         gap: 2px;
-        margin-top: 27px;
+        margin-top: 25px;
         padding-left: 18px;
         border-left: 2px solid var(--accent-2);
       }
@@ -137,18 +177,9 @@
         line-height: 1.7;
       }
 
-      .hero-bio p {
-        margin: 0;
-      }
-
-      .hero-bio p + p {
-        margin-top: 12px;
-      }
-
-      .hero-open-note {
-        color: var(--text);
-        font-weight: 630;
-      }
+      .hero-bio p { margin: 0; }
+      .hero-bio p + p { margin-top: 12px; }
+      .hero-open-note { color: var(--text); font-weight: 630; }
 
       .hero-priority-grid {
         display: grid;
@@ -202,13 +233,8 @@
         background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--surface)), var(--surface));
       }
 
-      .hero-actions {
-        margin-top: 25px;
-      }
-
-      .profile-links {
-        margin-top: 23px;
-      }
+      .hero-actions { margin-top: 25px; }
+      .profile-links { margin-top: 23px; }
 
       .interests-section {
         position: relative;
@@ -260,9 +286,7 @@
         box-shadow: var(--shadow-soft);
       }
 
-      .interest-card-wide {
-        grid-column: 1 / -1;
-      }
+      .interest-card-wide { grid-column: 1 / -1; }
 
       .interest-card-current {
         background: linear-gradient(145deg, color-mix(in srgb, var(--accent-2) 13%, var(--surface)), var(--surface));
@@ -299,9 +323,7 @@
         line-height: 1.65;
       }
 
-      .interest-card em {
-        color: var(--text);
-      }
+      .interest-card em { color: var(--text); }
 
       .nsf-spotlight-link {
         display: inline-flex;
@@ -331,10 +353,7 @@
         grid-template-columns: minmax(0, 1fr) minmax(330px, .76fr);
       }
 
-      .contact-details {
-        display: grid;
-        gap: 18px;
-      }
+      .contact-details { display: grid; gap: 18px; }
 
       .contact-detail-block {
         display: grid;
@@ -345,10 +364,7 @@
         background: var(--bg);
       }
 
-      .contact-detail-block strong {
-        color: var(--text);
-        font-size: .92rem;
-      }
+      .contact-detail-block strong { color: var(--text); font-size: .92rem; }
 
       .contact-detail-block span,
       .contact-detail-block address {
@@ -358,23 +374,22 @@
         line-height: 1.55;
       }
 
+      .contact-detail-block .name-note {
+        margin-top: 5px;
+        color: var(--text);
+        font-weight: 650;
+      }
+
       .contact-detail-block a:not(.button) {
         color: var(--accent);
         font-weight: 760;
         text-decoration: none;
       }
 
-      .contact-detail-block .button {
-        width: 100%;
-        margin-top: 7px;
-      }
+      .contact-detail-block .button { width: 100%; margin-top: 7px; }
 
       @media (max-width: 1080px) {
-        .identity-ribbon-inner {
-          grid-template-columns: 1fr;
-          gap: 12px;
-        }
-
+        .identity-ribbon-inner { grid-template-columns: 1fr; gap: 12px; }
         .identity-ribbon-contact {
           padding-top: 12px;
           padding-left: 0;
@@ -386,20 +401,14 @@
       @media (max-width: 980px) {
         .hero-priority-grid,
         .interests-layout,
-        .contact-card-expanded {
-          grid-template-columns: 1fr;
-        }
+        .contact-card-expanded { grid-template-columns: 1fr; }
       }
 
       @media (max-width: 720px) {
-        .identity-ribbon-inner {
-          padding: 13px 0 14px;
-        }
+        .identity-ribbon-inner { padding: 13px 0 14px; }
 
         .identity-ribbon-affiliation span:not(.ribbon-kicker),
-        .identity-ribbon-contact span:not(.ribbon-kicker) {
-          font-size: .78rem;
-        }
+        .identity-ribbon-contact span:not(.ribbon-kicker) { font-size: .78rem; }
 
         .hero h1 {
           display: block;
@@ -413,21 +422,37 @@
           font-size: .19em;
         }
 
-        .hero-affiliation {
-          margin-top: 24px;
+        .hero-name-context {
+          display: grid;
+          gap: 3px;
         }
+
+        .hero-name-context span + span::before { display: none; }
+        .hero-affiliation { margin-top: 24px; }
 
         .hero-priority-grid,
-        .interest-grid {
-          grid-template-columns: 1fr;
-        }
+        .interest-grid { grid-template-columns: 1fr; }
 
-        .interest-card-wide {
-          grid-column: auto;
-        }
+        .interest-card-wide { grid-column: auto; }
       }
     `;
     document.head.appendChild(style);
+  };
+
+  const applySiteIdentity = () => {
+    document.querySelectorAll('.brand-name').forEach((brand) => {
+      brand.textContent = preferredName;
+    });
+
+    document.querySelectorAll('.brand').forEach((brand) => {
+      brand.setAttribute('aria-label', `${preferredName}, home`);
+    });
+
+    const authorMeta = document.querySelector('meta[name="author"]');
+    if (authorMeta) authorMeta.setAttribute('content', formalName);
+
+    const isHomepage = Boolean(document.querySelector('.hero-copy'));
+    if (isHomepage) document.title = `${preferredName} | ${formalName}`;
   };
 
   const addIdentityRibbon = () => {
@@ -440,7 +465,8 @@
         <div class="container identity-ribbon-inner">
           <div class="identity-ribbon-affiliation">
             <span class="ribbon-kicker">Affiliation &amp; postal address</span>
-            <strong>N. R. Sree Harsha, PhD · Postdoctoral Research Associate</strong>
+            <strong>${formalName}, PhD · Postdoctoral Research Associate</strong>
+            <span class="identity-alias">Published as ${publicationName} · Please call me ${preferredName}.</span>
             <span>Department of Electrical and Computer Engineering · University of Rochester</span>
             <span>405 Computer Studies Building · 120 Trustee Rd · Rochester, NY 14620</span>
           </div>
@@ -472,7 +498,17 @@
 
     const name = heroCopy.querySelector('h1');
     if (name) {
-      name.innerHTML = 'N. R. Sree Harsha <span class="degree-suffix">PhD</span>';
+      name.innerHTML = `${preferredName} <span class="degree-suffix">PhD</span>`;
+
+      const context = document.createElement('div');
+      context.className = 'hero-name-context';
+      context.setAttribute('aria-label', 'Formal, publication, and preferred names');
+      context.innerHTML = `
+        <span class="formal-name">Formal name: ${formalName}</span>
+        <span>Published as ${publicationName}</span>
+        <span class="preferred-name">Please call me ${preferredName}—I prefer simplicity and clarity.</span>
+      `;
+      name.after(context);
     }
 
     const currentRole = heroCopy.querySelector('.hero-role');
@@ -620,13 +656,14 @@
         <div class="contact-detail-block">
           <strong>Academic address</strong>
           <address>
-            N. R. Sree Harsha, PhD<br>
+            ${formalName}, PhD<br>
             Postdoctoral Research Associate<br>
             Department of Electrical and Computer Engineering<br>
             University of Rochester<br>
             405 Computer Studies Building<br>
             120 Trustee Rd, Rochester, NY 14620
           </address>
+          <span class="name-note">Published as ${publicationName} · Preferred name: ${preferredName}</span>
         </div>
         <div class="contact-detail-block">
           <strong>Editors and professional correspondence</strong>
@@ -641,6 +678,7 @@
   };
 
   addRefinementStyles();
+  applySiteIdentity();
   addIdentityRibbon();
   refineNavigation();
   refineHomepageHero();
