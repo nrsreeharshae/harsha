@@ -5,6 +5,13 @@
   const nav = document.querySelector('.primary-nav');
   const currentYear = document.querySelector('[data-current-year]');
 
+  document.querySelectorAll('a[href="assets/Harsha_CV.pdf"]').forEach((link) => {
+    link.setAttribute('href', 'cv.html');
+    link.removeAttribute('target');
+    link.removeAttribute('rel');
+    if (link.textContent?.trim() === 'Download CV') link.textContent = 'View CV';
+  });
+
   const setTheme = (theme) => {
     root.dataset.theme = theme;
     localStorage.setItem('theme', theme);
@@ -52,4 +59,26 @@
   } else {
     revealElements.forEach((element) => element.classList.add('is-visible'));
   }
+
+  const filterButtons = document.querySelectorAll('[data-publication-filter]');
+  const publications = document.querySelectorAll('[data-publication-type]');
+  const publicationSections = document.querySelectorAll('.publication-section');
+
+  const applyFilter = (filter) => {
+    filterButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.publicationFilter === filter));
+    });
+    publications.forEach((publication) => {
+      const matches = filter === 'all' || publication.dataset.publicationType === filter;
+      publication.dataset.hidden = String(!matches);
+    });
+    publicationSections.forEach((section) => {
+      const visibleItems = section.querySelectorAll('[data-publication-type]:not([data-hidden="true"])');
+      section.dataset.empty = String(visibleItems.length === 0);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => applyFilter(button.dataset.publicationFilter || 'all'));
+  });
 })();
