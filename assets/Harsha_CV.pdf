@@ -1,0 +1,217 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 4 /Kids [5 0 R 7 0 R 9 0 R 11 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 4701 >>
+stream
+BT /F2 20.0 Tf 54.0 738.0 Td (N. R. Sree Harsha) Tj ET
+BT /F1 9.5 Tf 54.0 714.0 Td (Theoretical and Computational Physicist | University of Rochester) Tj ET
+0.09 0.25 0.37 RG 54 696.0 m 558 696.0 l S
+BT /F2 12.5 Tf 54.0 678.0 Td (PROFILE) Tj ET
+BT /F1 9.5 Tf 56.0 661.0 Td (- Theoretical and computational physicist specializing in non-equilibrium statistical mechanics,) Tj ET
+BT /F1 9.5 Tf 56.0 648.8 Td (  plasma physics, and electron-device modeling. Research develops Generalized Langevin Equation) Tj ET
+BT /F1 9.5 Tf 56.0 636.6 Td (  \(GLE\) and fluctuation-dissipation theorem \(FDT\) frameworks for kinetic-to-fluid) Tj ET
+BT /F1 9.5 Tf 56.0 624.4 Td (  coarse-graining, non-Markovian transport, ferroelectric switching, and hardware-aware) Tj ET
+BT /F1 9.5 Tf 56.0 612.2 Td (  stochastic optimization.) Tj ET
+BT /F1 9.5 Tf 56.0 595.0 Td (- Postdoctoral Associate, Department of Electrical & Computer Engineering, University of) Tj ET
+BT /F1 9.5 Tf 56.0 582.8 Td (  Rochester. Email: snaropan@ur.rochester.edu. Website: https://nrsreeharshae.github.io/harsha/) Tj ET
+BT /F1 9.5 Tf 56.0 565.6 Td (- Research record \(Aug. 2026\): 23 refereed journal articles, 1 book, 5 refereed conference) Tj ET
+BT /F1 9.5 Tf 56.0 553.4 Td (  papers; Co-Principal Investigator, NSF Award PHY-2606713.) Tj ET
+BT /F2 12.5 Tf 54.0 531.2 Td (EDUCATION) Tj ET
+BT /F1 9.5 Tf 56.0 514.2 Td (- PhD, Nuclear Engineering, Purdue University, 2018-2024. Thesis: Calculating) Tj ET
+BT /F1 9.5 Tf 56.0 502.0 Td (  Space-Charge-Limited Current Density in Nonplanar and Multidimensional Diodes. Advisor: Prof.) Tj ET
+BT /F1 9.5 Tf 56.0 489.8 Td (  Allen L. Garner.) Tj ET
+BT /F1 9.5 Tf 56.0 472.6 Td (- MSc, Nuclear Science and Engineering, University of Bristol, 2016-2018. Thesis: Application of) Tj ET
+BT /F1 9.5 Tf 56.0 460.4 Td (  Various Detection Techniques for Tritium Accountancy in DEMO.) Tj ET
+BT /F1 9.5 Tf 56.0 443.2 Td (- BE, Electrical and Electronics Engineering, R. V. College of Engineering, 2011-2015.) Tj ET
+BT /F2 12.5 Tf 54.0 421.0 Td (RESEARCH FUNDING) Tj ET
+BT /F1 9.5 Tf 56.0 404.0 Td (- National Science Foundation Award PHY-2606713, 2026-2029. Bridging Kinetic and Fluid Scales: A) Tj ET
+BT /F1 9.5 Tf 56.0 391.8 Td (  GLE-FDT Framework for Coarse-Graining Electron Kinetic Physics. Role: Co-Principal) Tj ET
+BT /F1 9.5 Tf 56.0 379.6 Td (  Investigator. PI: Prof. Chuang Ren; co-PI: Prof. Michael Huang; University of Rochester.) Tj ET
+BT /F2 12.5 Tf 54.0 357.4 Td (ACADEMIC AND RESEARCH EXPERIENCE) Tj ET
+BT /F1 9.5 Tf 56.0 340.4 Td (- Postdoctoral Associate, University of Rochester, Apr. 2025-present. Developing GLE-FDT plasma) Tj ET
+BT /F1 9.5 Tf 56.0 328.2 Td (  coarse-graining and EPOCH particle-in-cell validation; generalized Landau-Khalatnikov models) Tj ET
+BT /F1 9.5 Tf 56.0 316.0 Td (  for ferroelectric switching; and hardware-aware Langevin optimizers for NP-hard combinatorial) Tj ET
+BT /F1 9.5 Tf 56.0 303.8 Td (  optimization.) Tj ET
+BT /F1 9.5 Tf 56.0 286.6 Td (- Postdoctoral Research Assistant, Purdue University, June 2024-Mar. 2025. Applied) Tj ET
+BT /F1 9.5 Tf 56.0 274.4 Td (  non-equilibrium thermodynamics to collisional space-charge-limited current; extended the) Tj ET
+BT /F1 9.5 Tf 56.0 262.2 Td (  Mott-Gurney law to multidimensional geometries; benchmarked against MICHELLE and VSim;) Tj ET
+BT /F1 9.5 Tf 56.0 250.0 Td (  collaborated on non-isometric thermal deformation of composite laminates.) Tj ET
+BT /F1 9.5 Tf 56.0 232.8 Td (- Graduate Research Assistant, Purdue University, Jan. 2021-Apr. 2024. Derived exact and) Tj ET
+BT /F1 9.5 Tf 56.0 220.6 Td (  approximate SCLC solutions for nonplanar and multidimensional diodes using conformal mapping,) Tj ET
+BT /F1 9.5 Tf 56.0 208.4 Td (  variational calculus, and Lie-point symmetries.) Tj ET
+BT /F1 9.5 Tf 56.0 191.2 Td (- Graduate Research Assistant, University of Bristol and Culham Centre for Fusion Energy, Sept.) Tj ET
+BT /F1 9.5 Tf 56.0 179.0 Td (  2016-Jan. 2018. Developed a beta-induced X-ray spectrometry technique for tritium accountancy) Tj ET
+BT /F1 9.5 Tf 56.0 166.8 Td (  in the DEMO fusion power plant using Geant4.) Tj ET
+BT /F1 9.5 Tf 56.0 149.6 Td (- LIDAR for Advanced Gas-Cooled Reactors, EDF Energy, Sept. 2016-Sept. 2017. Designed a) Tj ET
+BT /F1 9.5 Tf 56.0 137.4 Td (  LIDAR-based imaging and scanning system for graphite-brick defect detection.) Tj ET
+BT /F2 12.5 Tf 54.0 115.2 Td (HONORS AND RECOGNITION) Tj ET
+BT /F1 9.5 Tf 56.0 98.2 Td (- IOP Trusted Reviewer status, IOP Publishing \(2024\).) Tj ET
+BT /F1 9.5 Tf 56.0 81.0 Td (- Purdue Nuclear Graduate Student Research Recognition Seminar Award \(2024\).) Tj ET
+BT /F1 7.8 Tf 54.0 28.0 Td (N. R. Sree Harsha | CV | Page 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 4744 >>
+stream
+BT /F2 20.0 Tf 54.0 738.0 Td (N. R. Sree Harsha) Tj ET
+BT /F1 9.5 Tf 54.0 714.0 Td (Theoretical and Computational Physicist | University of Rochester) Tj ET
+0.09 0.25 0.37 RG 54 696.0 m 558 696.0 l S
+BT /F2 12.5 Tf 54.0 678.0 Td (HONORS AND RECOGNITION \(continued\)) Tj ET
+BT /F1 9.5 Tf 56.0 661.0 Td (- Purdue Nuclear Engineering Graduate Research Award \(2023\).) Tj ET
+BT /F2 12.5 Tf 54.0 638.8 Td (INVITED SEMINARS) Tj ET
+BT /F1 9.5 Tf 56.0 621.8 Td (- N. R. S. Harsha, Calculating Space-Charge Limited Current Density in Nonplanar and) Tj ET
+BT /F1 9.5 Tf 56.0 609.6 Td (  Multi-dimensional Diodes, Los Alamos National Laboratory, 21 June 2023.) Tj ET
+BT /F1 9.5 Tf 56.0 592.4 Td (- N. R. S. Harsha, Application of Symmetries for Calculating Space-Charge-Limited Current,) Tj ET
+BT /F1 9.5 Tf 56.0 580.2 Td (  Graduate Research Recognition Seminar, Purdue University, 17 Jan. 2024.) Tj ET
+BT /F2 12.5 Tf 54.0 558.0 Td (REFEREED JOURNAL ARTICLES) Tj ET
+BT /F1 9.5 Tf 56.0 541.0 Td (1. A. L. Garner, J. K. Wright, and N. R. S. Harsha, A capacitance-based approach for) Tj ET
+BT /F1 9.5 Tf 56.0 528.8 Td (  determining the space-charge limited current density and electric potential in a crossed-field) Tj ET
+BT /F1 9.5 Tf 56.0 516.6 Td (  gap, AIP Advances 16, 065213 \(2026\).) Tj ET
+BT /F1 9.5 Tf 56.0 499.4 Td (2. N. R. S. Harsha, X. Zhu, D. Smithe, M. E. McFeely, A. Panda, and A. L. Garner, A general) Tj ET
+BT /F1 9.5 Tf 56.0 487.2 Td (  formulation of multi-dimensional space-charge-limited current density with nonzero) Tj ET
+BT /F1 9.5 Tf 56.0 475.0 Td (  monoenergetic initial velocity, Journal of Physics D: Applied Physics 59, 215502 \(2026\).) Tj ET
+BT /F1 9.5 Tf 56.0 457.8 Td (3. J. K. Wright, N. R. S. Harsha, and A. L. Garner, A generalized equation for the critical) Tj ET
+BT /F1 9.5 Tf 56.0 445.6 Td (  current for a one-dimensional crossed-field gap in an orthogonal coordinate system, Physics of) Tj ET
+BT /F1 9.5 Tf 56.0 433.4 Td (  Plasmas 32, 072115 \(2025\).) Tj ET
+BT /F1 9.5 Tf 56.0 416.2 Td (4. A. L. Garner, N. R. S. Harsha, and A. M. Loveless, Mott-Gurney for nonplanar and) Tj ET
+BT /F1 9.5 Tf 56.0 404.0 Td (  multi-dimensional diodes using point transformations, Journal of Applied Physics 137, 234501) Tj ET
+BT /F1 9.5 Tf 56.0 391.8 Td (  \(2025\).) Tj ET
+BT /F1 9.5 Tf 56.0 374.6 Td (5. A. L. Garner and N. R. S. Harsha, The implications of collisions on the spatial profile of) Tj ET
+BT /F1 9.5 Tf 56.0 362.4 Td (  electric potential and the space-charge limited current, IEEE Transactions on Electron Devices) Tj ET
+BT /F1 9.5 Tf 56.0 350.2 Td (  72, 1419-1426 \(2025\).) Tj ET
+BT /F1 9.5 Tf 56.0 333.0 Td (6. J. M. Halpern, N. R. S. Harsha, A. M. Darr, and A. L. Garner, Space-charge-limited current) Tj ET
+BT /F1 9.5 Tf 56.0 320.8 Td (  for nonplanar relativistic diodes with nonzero monoenergetic initial velocity using point) Tj ET
+BT /F1 9.5 Tf 56.0 308.6 Td (  transformations, Physics of Plasmas 32, 012106 \(2025\).) Tj ET
+BT /F1 9.5 Tf 56.0 291.4 Td (7. A. G. Sinelli, L. I. Breen, N. R. S. Harsha, A. M. Darr, A. M. Komrska, and A. L. Garner,) Tj ET
+BT /F1 9.5 Tf 56.0 279.2 Td (  Theoretical assessment of the transition between electron emission mechanisms for nonplanar) Tj ET
+BT /F1 9.5 Tf 56.0 267.0 Td (  diodes, IEEE Transactions on Electron Devices 72, 397-403 \(2025\).) Tj ET
+BT /F1 9.5 Tf 56.0 249.8 Td (8. N. R. S. Harsha, K. Chinwicharnam, V. Doty, and R. Byron Pipes, Non-isometric deformation) Tj ET
+BT /F1 9.5 Tf 56.0 237.6 Td (  in double curvature and symmetric composite laminates due to shrinkage, Polymer Composites 45,) Tj ET
+BT /F1 9.5 Tf 56.0 225.4 Td (  16589-16594 \(2024\).) Tj ET
+BT /F1 9.5 Tf 56.0 208.2 Td (9. X. Zhu, J. K. Wright, N. R. S. Harsha, and A. L. Garner, Critical current in a) Tj ET
+BT /F1 9.5 Tf 56.0 196.0 Td (  two-dimensional non-magnetically insulated crossed-field gap with monoenergetic emission,) Tj ET
+BT /F1 9.5 Tf 56.0 183.8 Td (  Physics of Plasmas 31, 072101 \(2024\).) Tj ET
+BT /F1 9.5 Tf 56.0 166.6 Td (10. X. Zhu, J. K. Wright, N. R. S. Harsha, J. Browning, and A. L. Garner, Electron) Tj ET
+BT /F1 9.5 Tf 56.0 154.4 Td (  trajectories and critical current in a two-dimensional planar magnetically insulated) Tj ET
+BT /F1 9.5 Tf 56.0 142.2 Td (  crossed-field gap, IEEE Access 12, 11378-11387 \(2024\).) Tj ET
+BT /F1 9.5 Tf 56.0 125.0 Td (11. X. Zhu, N. R. S. Harsha, and A. L. Garner, Uniform space-charge-limited current for a) Tj ET
+BT /F1 9.5 Tf 56.0 112.8 Td (  two-dimensional planar emitter with nonzero monoenergetic initial velocity, Journal of Applied) Tj ET
+BT /F1 9.5 Tf 56.0 100.6 Td (  Physics 134, 113301 \(2023\); Erratum 134, 239902 \(2023\).) Tj ET
+BT /F1 7.8 Tf 54.0 28.0 Td (N. R. Sree Harsha | CV | Page 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 4583 >>
+stream
+BT /F2 20.0 Tf 54.0 738.0 Td (N. R. Sree Harsha) Tj ET
+BT /F1 9.5 Tf 54.0 714.0 Td (Theoretical and Computational Physicist | University of Rochester) Tj ET
+0.09 0.25 0.37 RG 54 696.0 m 558 696.0 l S
+BT /F2 12.5 Tf 54.0 678.0 Td (REFEREED JOURNAL ARTICLES \(continued\)) Tj ET
+BT /F1 9.5 Tf 56.0 661.0 Td (12. N. R. S. Harsha, J. M. Halpern, A. M. Darr, and A. L. Garner, Space-charge-limited current) Tj ET
+BT /F1 9.5 Tf 56.0 648.8 Td (  density for nonplanar diodes with monoenergetic emission using Lie-point symmetries, Physical) Tj ET
+BT /F1 9.5 Tf 56.0 636.6 Td (  Review E 106, L063201 \(2022\).) Tj ET
+BT /F1 9.5 Tf 56.0 619.4 Td (13. J. M. Halpern, A. M. Darr, N. R. S. Harsha, and A. L. Garner, A coordinate system) Tj ET
+BT /F1 9.5 Tf 56.0 607.2 Td (  invariant formulation for space-charge limited current with nonzero injection velocity, Plasma) Tj ET
+BT /F1 9.5 Tf 56.0 595.0 Td (  Sources Science and Technology 31, 095002 \(2022\).) Tj ET
+BT /F1 9.5 Tf 56.0 577.8 Td (14. A. L. Garner, A. M. Darr, and N. R. S. Harsha, A tutorial on calculating space-charge) Tj ET
+BT /F1 9.5 Tf 56.0 565.6 Td (  limited current density for general geometries and multiple dimensions, IEEE Transactions on) Tj ET
+BT /F1 9.5 Tf 56.0 553.4 Td (  Plasma Science 50, 2528-2540 \(2022\).) Tj ET
+BT /F1 9.5 Tf 56.0 536.2 Td (15. N. R. S. Harsha, M. Pearlman, J. Browning, and A. L. Garner, A multi-dimensional) Tj ET
+BT /F1 9.5 Tf 56.0 524.0 Td (  Child-Langmuir law for any diode geometry, Physics of Plasmas 28, 122103 \(2021\).) Tj ET
+BT /F1 9.5 Tf 56.0 506.8 Td (16. A. M. Darr, N. R. S. Harsha, and A. L. Garner, Response to Comment on A coordinate system) Tj ET
+BT /F1 9.5 Tf 56.0 494.6 Td (  invariant formulation for space-charge limited current in vacuum, Applied Physics Letters 119,) Tj ET
+BT /F1 9.5 Tf 56.0 482.4 Td (  206102 \(2021\).) Tj ET
+BT /F1 9.5 Tf 56.0 465.2 Td (17. N. R. S. Harsha and A. L. Garner, Analytic solutions for space-charge-limited current) Tj ET
+BT /F1 9.5 Tf 56.0 453.0 Td (  density from a sharp tip, IEEE Transactions on Electron Devices 68, 6525-6531 \(2021\).) Tj ET
+BT /F1 9.5 Tf 56.0 435.8 Td (18. A. M. Darr, N. R. S. Harsha, and A. L. Garner, Response to Comment on A coordinate system) Tj ET
+BT /F1 9.5 Tf 56.0 423.6 Td (  invariant formulation for space-charge limited current in vacuum, Applied Physics Letters 118,) Tj ET
+BT /F1 9.5 Tf 56.0 411.4 Td (  266102 \(2021\).) Tj ET
+BT /F1 9.5 Tf 56.0 394.2 Td (19. N. R. S. Harsha and A. L. Garner, Applying conformal mapping to derive analytical) Tj ET
+BT /F1 9.5 Tf 56.0 382.0 Td (  solutions of space-charge-limited current density for various geometries, IEEE Transactions on) Tj ET
+BT /F1 9.5 Tf 56.0 369.8 Td (  Electron Devices 68, 264-270 \(2021\).) Tj ET
+BT /F1 9.5 Tf 56.0 352.6 Td (20. N. R. S. Harsha, A review of the variational methods for solving DC circuits, European) Tj ET
+BT /F1 9.5 Tf 56.0 340.4 Td (  Journal of Physics 40, 033001 \(2019\).) Tj ET
+BT /F1 9.5 Tf 56.0 323.2 Td (21. N. R. S. Harsha, The tightly bound nuclei in the liquid drop model, European Journal of) Tj ET
+BT /F1 9.5 Tf 56.0 311.0 Td (  Physics 39, 035802 \(2018\).) Tj ET
+BT /F1 9.5 Tf 56.0 293.8 Td (22. N. R. S. Harsha, A singularity in Kirchhoff's circuit equations, European Journal of) Tj ET
+BT /F1 9.5 Tf 56.0 281.6 Td (  Physics 37, 055801 \(2016\).) Tj ET
+BT /F1 9.5 Tf 56.0 264.4 Td (23. N. R. S. Harsha, A. Sreedevi, and A. Prakash, An unsolved electric circuit: a common) Tj ET
+BT /F1 9.5 Tf 56.0 252.2 Td (  misconception, Physics Education 50, 568 \(2015\).) Tj ET
+BT /F2 12.5 Tf 54.0 230.0 Td (BOOK) Tj ET
+BT /F1 9.5 Tf 56.0 213.0 Td (- N. R. S. Harsha, A. Prakash, and D. P. Kothari, The Foundations of Electric Circuit Theory,) Tj ET
+BT /F1 9.5 Tf 56.0 200.8 Td (  IOP Publishing, Bristol, UK \(2016\).) Tj ET
+BT /F2 12.5 Tf 54.0 178.6 Td (PREPRINT AND CURRENT MANUSCRIPTS) Tj ET
+BT /F1 9.5 Tf 56.0 161.6 Td (- N. R. S. Harsha, Z. Yu, C. Ren, V. Billings, and M. Huang, Nonlinear dynamical friction from) Tj ET
+BT /F1 9.5 Tf 56.0 149.4 Td (  the Doppler-shifted equilibrium memory kernel, arXiv:2602.04545 \(2026\).) Tj ET
+BT /F1 9.5 Tf 56.0 132.2 Td (- N. R. S. Harsha and M. Huang, A Generalized Landau-Khalatnikov Model for Ferroelectric) Tj ET
+BT /F1 9.5 Tf 56.0 120.0 Td (  Switching, manuscript \(2026\).) Tj ET
+BT /F1 9.5 Tf 56.0 102.8 Td (- N. R. S. Harsha, Non-Markovian Space-Charge-Limited Transport: Steady-State Scaling and Device) Tj ET
+BT /F1 9.5 Tf 56.0 90.6 Td (  Admittance, manuscript \(2026\).) Tj ET
+BT /F1 7.8 Tf 54.0 28.0 Td (N. R. Sree Harsha | CV | Page 3) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 1612 >>
+stream
+BT /F2 20.0 Tf 54.0 738.0 Td (N. R. Sree Harsha) Tj ET
+BT /F1 9.5 Tf 54.0 714.0 Td (Theoretical and Computational Physicist | University of Rochester) Tj ET
+0.09 0.25 0.37 RG 54 696.0 m 558 696.0 l S
+BT /F2 12.5 Tf 54.0 678.0 Td (PREPRINT AND CURRENT MANUSCRIPTS \(continued\)) Tj ET
+BT /F1 9.5 Tf 56.0 661.0 Td (- N. R. S. Harsha, Noise-Fidelity-Constrained Passive Approximation of Constant-Phase Elements,) Tj ET
+BT /F1 9.5 Tf 56.0 648.8 Td (  manuscript \(2026\).) Tj ET
+BT /F2 12.5 Tf 54.0 626.6 Td (SELECTED TEACHING AND SERVICE) Tj ET
+BT /F1 9.5 Tf 56.0 609.6 Td (- Instructor of Record, MA 158 \(Precalculus\), Department of Mathematics, Purdue University, Fall) Tj ET
+BT /F1 9.5 Tf 56.0 597.4 Td (  2020. Sole instructor for 40-50 first-year undergraduates.) Tj ET
+BT /F1 9.5 Tf 56.0 580.2 Td (- Teaching Assistant, MA 163 \(Calculus I\), Purdue University, Fall 2019.) Tj ET
+BT /F1 9.5 Tf 56.0 563.0 Td (- Invited Guest Lecturer, NUCL 200, Purdue University, Jan. 2023.) Tj ET
+BT /F1 9.5 Tf 56.0 545.8 Td (- Referee for 15 international journals, including Classical and Quantum Gravity, IEEE) Tj ET
+BT /F1 9.5 Tf 56.0 533.6 Td (  Transactions on Plasma Science, Journal of Applied Physics, Journal of Physics D: Applied) Tj ET
+BT /F1 9.5 Tf 56.0 521.4 Td (  Physics, Physics of Plasmas, and Plasma Sources Science and Technology.) Tj ET
+BT /F1 9.5 Tf 56.0 504.2 Td (- Professional memberships: Institute of Electrical and Electronics Engineers \(IEEE\); American) Tj ET
+BT /F1 9.5 Tf 56.0 492.0 Td (  Physical Society \(APS\).) Tj ET
+BT /F1 7.8 Tf 54.0 28.0 Td (N. R. Sree Harsha | CV | Page 4) Tj ET
+endstream
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000279 00000 n 
+0000000415 00000 n 
+0000005167 00000 n 
+0000005303 00000 n 
+0000010098 00000 n 
+0000010235 00000 n 
+0000014870 00000 n 
+0000015008 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+16672
+%%EOF
