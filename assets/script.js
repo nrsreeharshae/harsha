@@ -26,7 +26,7 @@
         display: block !important;
         max-width: 760px;
         margin-top: 3px;
-        font-size: clamp(3.15rem, 5vw, 5.15rem) !important;
+        font-size: clamp(2.95rem, 4.1vw, 4.3rem) !important;
         font-weight: 500;
         line-height: .96 !important;
         letter-spacing: -.052em !important;
@@ -92,7 +92,7 @@
         display: block;
         width: 100%;
         height: auto;
-        aspect-ratio: 740 / 515;
+        aspect-ratio: 420 / 292;
         object-fit: cover;
       }
 
@@ -138,7 +138,7 @@
 
       @media (max-width: 720px) {
         .hero h1 {
-          font-size: clamp(2.8rem, 13vw, 4rem) !important;
+          font-size: clamp(2.65rem, 12vw, 3.65rem) !important;
         }
 
         .hero-image-note {
@@ -255,12 +255,11 @@
       <figure class="hero-image-frame">
         <img
           src="assets/harsha-hero-science.webp"
-          width="740"
-          height="515"
+          width="420"
+          height="292"
           alt="A spiral galaxy above mountains and a lake, overlaid with curved scientific trajectories and a memory-kernel waveform"
           loading="eager"
           decoding="async">
-        <figcaption class="hero-image-note">Physics · memory · emergence</figcaption>
       </figure>
     `;
   };
