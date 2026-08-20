@@ -28,6 +28,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Bust browser cache for site script
+        run: |
+          for file in index.html publications.html cv.html; do
+            if [ -f "$file" ]; then
+              sed -i 's#assets/script.js#assets/script.js?v=20260820-1625#g' "$file"
+            fi
+          done
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
