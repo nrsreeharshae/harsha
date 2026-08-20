@@ -57,7 +57,7 @@
         font-style: italic;
       }
 
-      /* Hero: one continuous idea, not an infographic. */
+      /* Hero: a three-stage scientific idea flow. */
       .hero-visual { align-self: center; }
 
       .hero-concept-card {
@@ -100,21 +100,21 @@
         stroke-linecap: round;
       }
 
-      .hero-concept-card .motion-ghost {
+      .hero-concept-card .trajectory-ghost {
         fill: none;
         stroke: color-mix(in srgb, var(--accent) 24%, transparent);
         stroke-width: 13;
         stroke-linecap: round;
       }
 
-      .hero-concept-card .motion {
+      .hero-concept-card .trajectory {
         fill: none;
         stroke: var(--accent);
         stroke-width: 4.75;
         stroke-linecap: round;
       }
 
-      .hero-concept-card .particle {
+      .hero-concept-card .tagged-particle {
         fill: var(--surface);
         stroke: var(--accent);
         stroke-width: 3.5;
@@ -126,10 +126,38 @@
         stroke-width: 1.25;
       }
 
-      .hero-concept-card .symbol {
+      .hero-concept-card .flow {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        opacity: .45;
+      }
+
+      .hero-concept-card .stage-number {
+        fill: var(--accent-2);
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .13em;
+      }
+
+      .hero-concept-card .stage-title {
+        fill: var(--text);
+        font-family: var(--sans);
+        font-size: 16px;
+        font-weight: 760;
+      }
+
+      .hero-concept-card .stage-note {
+        fill: var(--muted);
+        font-family: var(--sans);
+        font-size: 11px;
+      }
+
+      .hero-concept-card .formula {
         fill: var(--muted);
         font-family: var(--serif);
-        font-size: 16px;
+        font-size: 13px;
         font-style: italic;
       }
 
@@ -233,34 +261,62 @@
     if (!visual) return;
 
     visual.removeAttribute('aria-hidden');
-    visual.setAttribute('aria-label', 'A conceptual scientific graphic showing microscopic fluctuations becoming memory and then smooth effective motion');
+    visual.setAttribute('aria-label', 'A conceptual scientific graphic showing microscopic fluctuations becoming a memory kernel and then effective coarse-grained dynamics');
 
     visual.innerHTML = `
       <figure class="hero-concept-card">
-        <svg viewBox="0 0 680 390" role="img" aria-labelledby="heroGraphicTitle heroGraphicDesc">
-          <title id="heroGraphicTitle">From fluctuation to effective motion</title>
-          <desc id="heroGraphicDesc">Microscopic fluctuations on the left feed into a decaying memory response and finally into a smooth coarse-grained trajectory.</desc>
+        <svg viewBox="0 0 720 430" role="img" aria-labelledby="heroGraphicTitle heroGraphicDesc">
+          <title id="heroGraphicTitle">From microscopic fluctuations to effective dynamics</title>
+          <desc id="heroGraphicDesc">Three stages show microscopic fluctuations, a memory kernel, and the resulting coarse-grained motion.</desc>
 
-          <path class="faint-line" d="M42 278 H638"></path>
+          <defs>
+            <marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+            </marker>
+          </defs>
+
+          <path class="faint-line" d="M40 337 H670"></path>
+
+          <text class="stage-number" x="54" y="62">01</text>
+          <text class="stage-title" x="54" y="88">Microscopic fluctuations</text>
+          <text class="stage-note" x="54" y="110">equilibrium bath</text>
 
           <g aria-hidden="true">
-            <circle class="bath-dot" cx="58" cy="153" r="6"></circle>
-            <circle class="bath-dot" cx="83" cy="118" r="5"></circle>
-            <circle class="bath-dot" cx="111" cy="164" r="7"></circle>
-            <circle class="bath-dot" cx="142" cy="126" r="5"></circle>
-            <circle class="bath-dot" cx="166" cy="174" r="6"></circle>
-            <circle class="bath-dot" cx="91" cy="203" r="5"></circle>
-            <circle class="bath-dot" cx="143" cy="215" r="5"></circle>
-            <path class="noise" d="M52 191 C65 151, 76 227, 89 172 S113 218, 126 169 S151 212, 166 180 S187 201, 205 188"></path>
+            <circle class="bath-dot" cx="68" cy="174" r="6"></circle>
+            <circle class="bath-dot" cx="93" cy="139" r="5"></circle>
+            <circle class="bath-dot" cx="121" cy="185" r="7"></circle>
+            <circle class="bath-dot" cx="152" cy="147" r="5"></circle>
+            <circle class="bath-dot" cx="176" cy="195" r="6"></circle>
+            <circle class="bath-dot" cx="101" cy="224" r="5"></circle>
+            <circle class="bath-dot" cx="153" cy="236" r="5"></circle>
+            <path class="noise" d="M62 212 C75 172, 86 248, 99 193 S123 239, 136 190 S161 233, 176 201 S197 222, 215 209"></path>
+          </g>
+          <text class="formula" x="54" y="303">⟨R(t)R(0)⟩</text>
+
+          <path class="flow" d="M224 210 H256" marker-end="url(#flowArrow)" style="color:var(--accent-2)"></path>
+
+          <text class="stage-number" x="278" y="62">02</text>
+          <text class="stage-title" x="278" y="88">Memory kernel</text>
+          <text class="stage-note" x="278" y="110">retained history</text>
+
+          <path class="memory" d="M286 166 C310 175, 316 216, 330 243 S363 270, 384 239 S417 188, 439 215"></path>
+          <text class="formula" x="354" y="303">K(t)</text>
+
+          <path class="flow" d="M448 210 H478" marker-end="url(#flowArrow)" style="color:var(--accent-2)"></path>
+
+          <text class="stage-number" x="488" y="62">03</text>
+          <text class="stage-title" x="488" y="88">Effective dynamics</text>
+          <text class="stage-note" x="488" y="110">coarse-grained motion</text>
+
+          <g aria-hidden="true">
+            <path class="trajectory-ghost" d="M492 231 C518 170, 547 173, 568 220 S600 279, 624 205"></path>
+            <path class="trajectory" d="M492 231 C518 170, 547 173, 568 220 S600 279, 624 205"></path>
+            <circle class="tagged-particle" cx="492" cy="231" r="9"></circle>
+            <circle class="tagged-particle" cx="568" cy="220" r="9"></circle>
+            <circle class="tagged-particle" cx="624" cy="205" r="9"></circle>
           </g>
 
-          <path class="memory" d="M226 151 C248 159, 255 202, 270 230 S304 260, 326 227 S360 173, 383 204 S416 245, 438 225"></path>
-          <text class="symbol" x="323" y="300" text-anchor="middle">K(t)</text>
-
-          <path class="motion-ghost" d="M466 229 C493 178, 524 174, 546 215 S585 267, 625 196"></path>
-          <path class="motion" d="M466 229 C493 178, 524 174, 546 215 S585 267, 625 196"></path>
-          <circle class="particle" cx="466" cy="229" r="8"></circle>
-          <circle class="particle" cx="625" cy="196" r="8"></circle>
+          <text class="formula" x="488" y="303">reduced description</text>
         </svg>
         <figcaption>
           <strong>Fluctuation → memory → motion</strong>
