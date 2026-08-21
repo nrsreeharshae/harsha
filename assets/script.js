@@ -404,6 +404,7 @@
 
   const simplifyIdentity = () => {
     const publicationName = 'N. R. Sree Harsha';
+    const alternatePublicationName = 'N. R. S. Harsha';
     const displayName = `${publicationName}, PhD`;
     const formalName = 'Sree Harsha Naropanth Ramamurthy';
     const orcid = '0000-0003-2882-8996';
@@ -417,11 +418,11 @@
     const oldContext = document.querySelector('.hero-name-context');
     if (oldContext) {
       oldContext.innerHTML = `
-        <span class="identity-line formal-name"><span class="formal-name-label">Formal name:</span> ${formalName}</span>
-        <span class="identity-line published-name"><span class="published-name-label">Also published as:</span> ${publicationName}</span>
-        <span class="identity-line orcid-line"><span class="orcid-label">ORCID:</span> <a href="${ORCID_URL}" target="_blank" rel="noopener">${orcid}</a></span>
+        <div class="identity-line formal-name"><span class="formal-name-label">Formal name:</span> ${formalName}</div>
+        <div class="identity-line published-name"><span class="published-name-label">Also published as</span> ${alternatePublicationName}</div>
+        <div class="identity-line orcid-line"><span class="orcid-label">ORCID:</span> <a href="${ORCID_URL}" target="_blank" rel="noopener">${orcid}</a></div>
       `;
-      oldContext.setAttribute('aria-label', `Formal name: ${formalName}. Also published as: ${publicationName}. ORCID: ${orcid}.`);
+      oldContext.setAttribute('aria-label', `Formal name: ${formalName}. Also published as ${alternatePublicationName}. ORCID: ${orcid}.`);
     }
 
     const ribbonStrong = document.querySelector('.identity-ribbon-affiliation strong');
