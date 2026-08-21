@@ -42,10 +42,25 @@
         line-height: 1.55;
       }
 
-      .hero-name-context span { display: inline !important; }
-      .hero-name-context span::before { display: none !important; }
-      .hero-name-context .formal-name { color: var(--muted) !important; font-weight: 560 !important; }
-      .formal-name-label { color: var(--accent-2); font-weight: 760; }
+      .hero-name-context .identity-line {
+        display: block !important;
+      }
+
+      .hero-name-context .identity-line + .identity-line {
+        margin-top: 1px;
+      }
+
+      .hero-name-context .formal-name,
+      .hero-name-context .published-name {
+        color: var(--muted) !important;
+        font-weight: 560 !important;
+      }
+
+      .formal-name-label,
+      .published-name-label {
+        color: var(--accent-2);
+        font-weight: 760;
+      }
 
       .identity-ribbon-affiliation .identity-alias,
       .contact-detail-block .name-note { display: none !important; }
@@ -209,18 +224,22 @@
 
   const simplifyIdentity = () => {
     const publicationName = 'N. R. Sree Harsha';
+    const displayName = `${publicationName}, PhD`;
     const formalName = 'Sree Harsha Naropanth Ramamurthy';
 
     document.querySelectorAll('.brand-name').forEach((brand) => { brand.textContent = publicationName; });
     document.querySelectorAll('.brand').forEach((brand) => { brand.setAttribute('aria-label', `${publicationName}, home`); });
 
     const heroName = document.querySelector('.hero-copy h1');
-    if (heroName) heroName.textContent = publicationName;
+    if (heroName) heroName.textContent = displayName;
 
     const oldContext = document.querySelector('.hero-name-context');
     if (oldContext) {
-      oldContext.innerHTML = `<span class="formal-name"><span class="formal-name-label">Formal name:</span> ${formalName}</span>`;
-      oldContext.setAttribute('aria-label', `Formal name: ${formalName}`);
+      oldContext.innerHTML = `
+        <span class="identity-line formal-name"><span class="formal-name-label">Formal name:</span> ${formalName}</span>
+        <span class="identity-line published-name"><span class="published-name-label">Published as:</span> ${publicationName}</span>
+      `;
+      oldContext.setAttribute('aria-label', `Formal name: ${formalName}. Published as: ${publicationName}.`);
     }
 
     const ribbonStrong = document.querySelector('.identity-ribbon-affiliation strong');
