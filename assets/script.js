@@ -5,6 +5,10 @@
   coreScript.async = false;
   coreScript.dataset.siteCore = 'true';
 
+  const SCHOLAR_URL = 'https://scholar.google.com/citations?user=cXQjdbMAAAAJ&hl=en';
+  const BOOK_URL = 'https://doi.org/10.1088/978-0-7503-1266-0';
+  const NSF_URL = 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=2606713';
+
   const replaceCcLine = (element) => {
     if (!element || !element.textContent.trim().startsWith('Please CC')) return;
     element.innerHTML = 'CC: <a href="mailto:nrsreeharshae@gmail.com">nrsreeharshae@gmail.com</a>';
@@ -42,13 +46,8 @@
         line-height: 1.55;
       }
 
-      .hero-name-context .identity-line {
-        display: block !important;
-      }
-
-      .hero-name-context .identity-line + .identity-line {
-        margin-top: 1px;
-      }
+      .hero-name-context .identity-line { display: block !important; }
+      .hero-name-context .identity-line + .identity-line { margin-top: 1px; }
 
       .hero-name-context .formal-name,
       .hero-name-context .published-name {
@@ -72,6 +71,85 @@
         font-style: italic;
       }
 
+      /* Copyable email addresses: visibly selectable, click to copy, never open a mail app. */
+      .copy-email {
+        cursor: copy !important;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: .18em;
+        user-select: text;
+      }
+
+      .copy-email::after {
+        content: '  ⧉';
+        font-size: .78em;
+        opacity: .62;
+        text-decoration: none;
+      }
+
+      .copy-email:hover,
+      .copy-email:focus-visible { color: var(--accent-2); }
+
+      .copy-toast {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 9999;
+        max-width: calc(100vw - 40px);
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--surface);
+        color: var(--text);
+        box-shadow: var(--shadow);
+        font-size: .82rem;
+        opacity: 0;
+        transform: translateY(8px);
+        pointer-events: none;
+        transition: opacity .18s ease, transform .18s ease;
+      }
+
+      .copy-toast.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Linked research-record tiles. */
+      .stat-link {
+        position: relative;
+        display: block;
+        color: inherit !important;
+        text-decoration: none !important;
+        cursor: pointer;
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      }
+
+      .stat-link:hover,
+      .stat-link:focus-visible {
+        transform: translateY(-2px);
+        border-color: color-mix(in srgb, var(--accent-2) 45%, var(--border));
+        box-shadow: var(--shadow);
+      }
+
+      .stat-link::after {
+        content: '↗';
+        position: absolute;
+        top: 11px;
+        right: 14px;
+        color: var(--accent-2);
+        font-size: .8rem;
+        opacity: .72;
+      }
+
+      .inline-award-link {
+        color: inherit;
+        text-decoration-color: color-mix(in srgb, var(--accent-2) 55%, transparent);
+        text-underline-offset: .18em;
+      }
+
+      .inline-award-link:hover,
+      .inline-award-link:focus-visible { color: var(--accent-2); }
+
       /* Hero: a three-stage scientific idea flow. */
       .hero-visual { align-self: center; }
 
@@ -87,11 +165,7 @@
         box-shadow: var(--shadow);
       }
 
-      .hero-concept-card svg {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
+      .hero-concept-card svg { display: block; width: 100%; height: auto; }
 
       .hero-concept-card .faint-line {
         fill: none;
@@ -195,6 +269,7 @@
       @media (max-width: 720px) {
         .hero h1 { font-size: clamp(2.65rem, 12vw, 3.65rem) !important; }
         .hero-concept-card figcaption { display: block; padding-inline: 20px; }
+        .copy-toast { right: 12px; bottom: 12px; max-width: calc(100vw - 24px); }
       }
     `;
     document.head.appendChild(style);
@@ -212,13 +287,115 @@
       const heading = block.querySelector('strong');
       if (heading && /editors|correspondence/i.test(heading.textContent)) heading.textContent = 'Email';
       block.querySelectorAll('span').forEach(replaceCcLine);
-      const button = block.querySelector('.button[href^="mailto:snaropan@ur.rochester.edu"]');
-      if (button) button.textContent = 'Email with CC';
+    });
+  };
+
+  const copyText = async (text) => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (_) {
+      // Fall through to the legacy selection-based copy method.
+    }
+
+    const helper = document.createElement('textarea');
+    helper.value = text;
+    helper.setAttribute('readonly', '');
+    helper.style.position = 'fixed';
+    helper.style.opacity = '0';
+    document.body.appendChild(helper);
+    helper.select();
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+    helper.remove();
+    return copied;
+  };
+
+  let toastTimer;
+  const showCopyToast = (message) => {
+    let toast = document.querySelector('#copy-email-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'copy-email-toast';
+      toast.className = 'copy-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 1800);
+  };
+
+  const makeEmailsCopyable = () => {
+    document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+      if (link.dataset.copyReady === 'true') return;
+
+      const href = link.getAttribute('href') || '';
+      const email = decodeURIComponent(href.slice(7).split('?')[0]).trim();
+      if (!email) return;
+
+      link.dataset.copyReady = 'true';
+      link.dataset.copyEmail = email;
+      link.classList.add('copy-email');
+      link.removeAttribute('href');
+      link.setAttribute('role', 'button');
+      link.setAttribute('tabindex', '0');
+      link.setAttribute('title', `Copy ${email}`);
+      link.setAttribute('aria-label', `Copy email address ${email}`);
+
+      if (/^email(?: with cc)?$/i.test(link.textContent.trim())) link.textContent = email;
+
+      const activate = async (event) => {
+        event.preventDefault();
+        const copied = await copyText(email);
+        showCopyToast(copied ? `Copied ${email}` : `Could not copy ${email}`);
+      };
+
+      link.addEventListener('click', activate);
+      link.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') activate(event);
+      });
+    });
+  };
+
+  const linkifyResearchRecord = () => {
+    const targets = {
+      '23': [SCHOLAR_URL, 'View N. R. Sree Harsha on Google Scholar'],
+      '1': [BOOK_URL, 'View The Foundations of Electric Circuit Theory'],
+      'NSF': [NSF_URL, 'View NSF Award PHY-2606713']
+    };
+
+    document.querySelectorAll('.stat-grid .stat').forEach((stat) => {
+      if (stat.matches('a')) return;
+      const key = stat.querySelector('strong')?.textContent.trim();
+      const target = targets[key];
+      if (!target) return;
+
+      const link = document.createElement('a');
+      link.className = `${stat.className} stat-link`;
+      link.href = target[0];
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.setAttribute('aria-label', target[1]);
+      link.innerHTML = stat.innerHTML;
+      stat.replaceWith(link);
     });
 
-    document.querySelectorAll('a[href^="mailto:snaropan@ur.rochester.edu"]').forEach((link) => {
-      const href = link.getAttribute('href');
-      if (href) link.setAttribute('href', href.replace('Professional%20or%20editorial%20correspondence', 'Website%20contact'));
+    document.querySelectorAll('h2, h3, span').forEach((element) => {
+      if (element.closest('a')) return;
+      if (element.textContent.trim() !== 'NSF Award PHY-2606713') return;
+      const link = document.createElement('a');
+      link.className = 'inline-award-link';
+      link.href = NSF_URL;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = element.textContent.trim();
+      link.setAttribute('aria-label', 'View NSF Award PHY-2606713');
+      element.replaceChildren(link);
     });
   };
 
@@ -350,6 +527,8 @@
     simplifyEmailCopy();
     simplifyIdentity();
     simplifyHeroGraphic();
+    linkifyResearchRecord();
+    makeEmailsCopyable();
   };
 
   coreScript.addEventListener('load', refineSite, { once: true });
