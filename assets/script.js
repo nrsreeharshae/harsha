@@ -5,7 +5,7 @@
   coreScript.async = false;
   coreScript.dataset.siteCore = 'true';
 
-  const SCHOLAR_URL = 'https://scholar.google.com/citations?user=cXQjdbMAAAAJ&hl=en';
+  const ORCID_URL = 'https://orcid.org/0000-0003-2882-8996';
   const BOOK_URL = 'https://doi.org/10.1088/978-0-7503-1266-0';
   const NSF_URL = 'https://www.nsf.gov/awardsearch/showAward?AWD_ID=2606713';
 
@@ -50,16 +50,29 @@
       .hero-name-context .identity-line + .identity-line { margin-top: 1px; }
 
       .hero-name-context .formal-name,
-      .hero-name-context .published-name {
+      .hero-name-context .published-name,
+      .hero-name-context .orcid-line {
         color: var(--muted) !important;
         font-weight: 560 !important;
       }
 
       .formal-name-label,
-      .published-name-label {
+      .published-name-label,
+      .orcid-label {
         color: var(--accent-2);
         font-weight: 760;
       }
+
+      .hero-name-context .orcid-line a {
+        color: inherit;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: color-mix(in srgb, var(--accent-2) 50%, transparent);
+        text-underline-offset: .18em;
+      }
+
+      .hero-name-context .orcid-line a:hover,
+      .hero-name-context .orcid-line a:focus-visible { color: var(--accent-2); }
 
       .identity-ribbon-affiliation .identity-alias,
       .contact-detail-block .name-note { display: none !important; }
@@ -364,7 +377,7 @@
 
   const linkifyResearchRecord = () => {
     const targets = {
-      '23': [SCHOLAR_URL, 'View N. R. Sree Harsha on Google Scholar'],
+      '23': [ORCID_URL, 'View N. R. Sree Harsha on ORCID'],
       '1': [BOOK_URL, 'View The Foundations of Electric Circuit Theory'],
       'NSF': [NSF_URL, 'View NSF Award PHY-2606713']
     };
@@ -403,6 +416,7 @@
     const publicationName = 'N. R. Sree Harsha';
     const displayName = `${publicationName}, PhD`;
     const formalName = 'Sree Harsha Naropanth Ramamurthy';
+    const orcid = '0000-0003-2882-8996';
 
     document.querySelectorAll('.brand-name').forEach((brand) => { brand.textContent = publicationName; });
     document.querySelectorAll('.brand').forEach((brand) => { brand.setAttribute('aria-label', `${publicationName}, home`); });
@@ -415,8 +429,9 @@
       oldContext.innerHTML = `
         <span class="identity-line formal-name"><span class="formal-name-label">Formal name:</span> ${formalName}</span>
         <span class="identity-line published-name"><span class="published-name-label">Published as:</span> ${publicationName}</span>
+        <span class="identity-line orcid-line"><span class="orcid-label">ORCID:</span> <a href="${ORCID_URL}" target="_blank" rel="me noopener">${orcid}</a></span>
       `;
-      oldContext.setAttribute('aria-label', `Formal name: ${formalName}. Published as: ${publicationName}.`);
+      oldContext.setAttribute('aria-label', `Formal name: ${formalName}. Published as: ${publicationName}. ORCID: ${orcid}.`);
     }
 
     const ribbonStrong = document.querySelector('.identity-ribbon-affiliation strong');
