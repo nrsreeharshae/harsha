@@ -102,6 +102,9 @@
     const heroName = document.querySelector('.hero-copy h1');
     if (heroName) heroName.textContent = `${displayName}, PhD`;
 
+    const heroOpenNote = document.querySelector('.hero-open-note');
+    if (heroOpenNote) heroOpenNote.textContent = 'I am always happy to discuss new ideas and to collaborate when there is an interesting question worth exploring.';
+
     const context = document.querySelector('.hero-name-context');
     if (context) {
       context.innerHTML = `
