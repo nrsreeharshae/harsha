@@ -263,6 +263,35 @@
     visual.innerHTML=`<figure class="hero-concept-card"><svg viewBox="0 0 720 430" role="img" aria-labelledby="heroGraphicTitle heroGraphicDesc"><title id="heroGraphicTitle">From microscopic fluctuations to effective dynamics</title><desc id="heroGraphicDesc">Three stages show microscopic fluctuations, a memory kernel, and the resulting coarse-grained motion.</desc><defs><marker id="flowArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"></path></marker></defs><path class="faint-line" d="M40 337 H670"></path><text class="stage-number" x="54" y="62">01</text><text class="stage-title" x="54" y="88">Microscopic fluctuations</text><text class="stage-note" x="54" y="110">equilibrium bath</text><g aria-hidden="true"><circle class="bath-dot" cx="68" cy="174" r="6"></circle><circle class="bath-dot" cx="93" cy="139" r="5"></circle><circle class="bath-dot" cx="121" cy="185" r="7"></circle><circle class="bath-dot" cx="152" cy="147" r="5"></circle><circle class="bath-dot" cx="176" cy="195" r="6"></circle><circle class="bath-dot" cx="101" cy="224" r="5"></circle><circle class="bath-dot" cx="153" cy="236" r="5"></circle><path class="noise" d="M62 212 C75 172,86 248,99 193 S123 239,136 190 S161 233,176 201 S197 222,215 209"></path></g><text class="formula" x="54" y="303">⟨R(t)R(0)⟩</text><path class="flow" d="M224 210 H256" marker-end="url(#flowArrow)" style="color:var(--accent-2)"></path><text class="stage-number" x="278" y="62">02</text><text class="stage-title" x="278" y="88">Memory kernel</text><text class="stage-note" x="278" y="110">retained history</text><path class="memory" d="M286 166 C310 175,316 216,330 243 S363 270,384 239 S417 188,439 215"></path><text class="formula" x="354" y="303">K(t)</text><path class="flow" d="M448 210 H478" marker-end="url(#flowArrow)" style="color:var(--accent-2)"></path><text class="stage-number" x="488" y="62">03</text><text class="stage-title" x="488" y="88">Effective dynamics</text><text class="stage-note" x="488" y="110">coarse-grained motion</text><g aria-hidden="true"><path class="trajectory-ghost" d="M492 231 C518 170,547 173,568 220 S600 279,624 205"></path><path class="trajectory" d="M492 231 C518 170,547 173,568 220 S600 279,624 205"></path><circle class="tagged-particle" cx="492" cy="231" r="9"></circle><circle class="tagged-particle" cx="568" cy="220" r="9"></circle><circle class="tagged-particle" cx="624" cy="205" r="9"></circle></g><text class="formula" x="488" y="303">reduced description</text></svg><figcaption><strong>Fluctuation → memory → motion</strong><span>One recurring idea across my current work.</span></figcaption></figure>`;
   };
 
+  const rearrangeHeroLayout = () => {
+    const heroVisual=document.querySelector('.hero-visual');
+    const priorityGrid=document.querySelector('.hero-priority-grid');
+    const profileLinks=document.querySelector('.hero-copy .profile-links');
+    if(!heroVisual)return;
+
+    document.querySelector('.priority-card-editorial')?.remove();
+
+    if(priorityGrid&&!heroVisual.querySelector('.hero-priority-grid'))heroVisual.prepend(priorityGrid);
+    if(profileLinks&&!heroVisual.querySelector('.profile-links'))heroVisual.appendChild(profileLinks);
+
+    if(!document.querySelector('#hero-layout-overrides')){
+      const style=document.createElement('style');
+      style.id='hero-layout-overrides';
+      style.textContent=`
+        .hero{padding-bottom:34px!important}
+        .hero-grid{align-items:start!important;gap:clamp(28px,4vw,56px)!important}
+        .hero-actions{margin-top:16px!important}
+        .hero-visual{display:grid;align-content:start;gap:16px;align-self:start!important;margin-top:0!important}
+        .hero-visual .hero-priority-grid{max-width:none!important;margin:0!important;grid-template-columns:1fr!important}
+        .hero-visual .priority-card{min-height:auto!important}
+        .hero-visual .profile-links{margin:0!important;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:flex-start}
+        .stat-grid{margin-top:24px!important}
+        @media(max-width:980px){.hero-visual .hero-priority-grid{grid-template-columns:1fr!important}}
+      `;
+      document.head.appendChild(style);
+    }
+  };
+
   const refine = () => {
     addOverrides();
     simplifyIdentity();
@@ -273,6 +302,7 @@
     reconcilePublications();
     enablePublicationFilters();
     simplifyHeroGraphic();
+    rearrangeHeroLayout();
     linkifyResearchRecord();
     makeEmailsSelectable();
   };
